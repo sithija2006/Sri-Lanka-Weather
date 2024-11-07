@@ -65,9 +65,9 @@ const displayWeather = (data) => {
     const weatherInfo = document.getElementById('weather-info');
     weatherInfo.innerHTML = `
         <h2>${data.data[0].city_name}</h2>
-        <p>උෂ්ණත්වය: ${data.data[0].temp} °C</p>
-        <p>හාමින: ${data.data[0].rh}%</p>
-        <p>සුළං වේගය: ${data.data[0].wind_spd} m/s</p>
+        <p>Temperature: ${data.data[0].temp} °C</p>
+        <p>Precip: ${data.data[0].rh}%</p>
+        <p>Wind Speed: ${data.data[0].wind_spd} m/s</p>
     `;
     weatherInfo.style.opacity = '1'; // Set opacity for smooth transition
 };
@@ -79,7 +79,7 @@ const displayRainInfo = (data) => {
         ? data.current.precip_mm 
         : 'තොරතුරු නොමැත'; // Default message if no data
 
-    rainInfo.innerHTML = `<p>අද වහින තැන්: ${precip} mm</p>`;
+    rainInfo.innerHTML = `<p>Day Amount: ${precip} mm</p>`;
     rainInfo.style.opacity = '1'; // Set opacity for smooth transition
 };
 
